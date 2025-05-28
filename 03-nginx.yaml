@@ -1,6 +1,7 @@
 - name: install and run nginx
   hosts: local
   connection: local
+  become: yes #sudouser
   tasks:
     - name: install nginx
       ansible.builtin.package:
@@ -12,3 +13,4 @@
        name: nginx
        state: started
        enable: yes
+
