@@ -1,9 +1,9 @@
 - name: print helloworld
-  hosts: local
-  connection: 
+  hosts: frontend
+  connection: frontend
   tasks:
     - name: printing hello world
-      ansible.buildin.debug:
+      ansible.builtin.debug:
       msg: "hello world from ansible"
 
 
