@@ -1,6 +1,5 @@
 - name: install and run nginx
-  hosts: local
-  connection: local
+  hosts: frontend
   become: yes #sudouser
   tasks:
     - name: install nginx
