@@ -9,8 +9,8 @@
       vars:
         course: ansible
       anible.builtin.debug:
-      msg: "learning {{couse}} from {{trainer}} in {{batch}}"
+        msg: "learning {{couse}} from {{trainer}} in {{batch}}"
   tasks:
     - name: printing couse info 2
       ansible.builtin.debug:
-      msg: "learning {{couse}} from {{trainer}} in {{batch}}"
+        msg: "learning {{couse}} from {{trainer}} in {{batch}}"
