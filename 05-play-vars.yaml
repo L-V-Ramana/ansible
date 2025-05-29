@@ -1,0 +1,11 @@
+- name: variables in ansible
+  hosts: local
+  connection: local
+  vars:
+    course: devops with Aws
+    trainer: sivakumarreddy
+    batch: 84s
+  -tasks:
+    - name: printing course info
+      ansible.builtin.debug:
+        msg: "i am learning {{course}} by {{trainer}} in {{batch}}"
