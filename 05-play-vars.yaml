@@ -5,7 +5,7 @@
     course: devops with Aws
     trainer: sivakumarreddy
     batch: 84s
-  -tasks:
+  tasks:
     - name: printing course info
       ansible.builtin.debug:
-        msg: "i am learning {{course}} by {{trainer}} in {{batch}}"
+        msg: "i am learning: {{course}} by {{  trainer}} in {{batch}}"
