@@ -1,5 +1,6 @@
 - name: local and global vars in ansible
   hosts: local
+  become: yes
   vars:
     course: devops with Aws
     trainer: lella 
