@@ -13,7 +13,6 @@
 - name: Multiplaybook 2
   hosts: local
   connection: local
-  become: no
 - tasks:
     - name: play 2 task1
       ansible.builtin.debug:
