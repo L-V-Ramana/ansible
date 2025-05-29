@@ -1,0 +1,23 @@
+- name: Multiplay book
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: task 1 play 1
+      ansible.builti.debug:
+       msg: "play 1 task 1" 
+    - name: task 1 play 2
+      ansible.builtin.debug:
+        msg: "play 1 task 2"
+    
+- name: Multiplaybook 2
+  hosts: local
+  connection: local
+  become: no
+- tasks:
+    - name: play 2 task1
+      ansible.builtin.debug:
+        msg: "play 2 task 1"
+    - name: play2 task 2
+      ansible.builtin.debug:
+        msg: "play2 task 2"
