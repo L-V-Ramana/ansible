@@ -1,0 +1,16 @@
+- name: local and global vars in ansible
+  hosts: local
+  vars:
+    course: devops with Aws
+    trainer: lella 
+    batch: 84s
+  tasks:
+    - name: printing course info
+      vars:
+        course: ansible
+      anible.builtin.debug:
+      msg: "learning {{couse}} from {{trainer}} in {{batch}}"
+  tasks:
+    - name: printing couse info 2
+      ansible.builtin.debug:
+      msg: "learning {{couse}} from {{trainer}} in {{batch}}"
