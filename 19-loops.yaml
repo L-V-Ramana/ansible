@@ -1,6 +1,6 @@
 - name: loops with both name and state 
-  hosts: local
-  connection: local 
+  hosts: frontend
+ 
   tasks:
   - name: installing packages
     ansible.builtin.package:
