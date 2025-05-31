@@ -1,0 +1,10 @@
+- name: conditions
+  hosts: local
+  connection: local
+  vars:
+    number: 10
+  tasks:
+    - name: printing numbers
+      ansible.builtin.debug:
+       msg: "nuber"
+      when: number < 20
