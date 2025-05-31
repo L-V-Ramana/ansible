@@ -1,0 +1,16 @@
+- name: expecting input from user by using promy
+  hosts: local
+  connection: local
+  vars_promt:
+    - name: username
+      promt: please enter your username
+      private: false
+
+    - name: Password
+      promt: please enter your Password
+      private: true
+
+  tasks:
+    - name: expecting user name from user
+      ansible.builtin.debug:
+       msg: your username is {{ username }} and password is {{ password }}
