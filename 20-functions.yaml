@@ -29,6 +29,8 @@
       msg: "{{ skills | dict2items }}"
     
   - name: uppercase
+    vars: 
+      name: ramana
     ansible.builtin.debug:
     msg: "{{ names | upper }}"
 
