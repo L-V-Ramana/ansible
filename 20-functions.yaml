@@ -1,8 +1,14 @@
 - name: function or filters in ansible
   hosts: local
   connection: local
+  vars:
+    names: "rakesh,harsha,shashi,mahi"
   tasks:
   - name: checking default
     ansible.builtin.debug:
-      msg: "{{ person | default('ramana') }}"
+      msg: "{{ names | default('ramana') }}"
+
+  - name: spliting names
+    ansible.builtin.debug:
+      msg: "{{ names | split(',') }}"
 
