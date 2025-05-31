@@ -18,7 +18,7 @@
         - { 'key': 'ramana', 'value': 'java' }
         - { 'key': 'rakesh', 'value':'cpp'}
     ansible.builtin.debug:
-      msg: "{{ skills | items2ditc }}"
+      msg: "{{ skills | items2dict }}"
 
   - name: convert map to list 
     vars:
