@@ -40,3 +40,9 @@
       name: RAMANA
     ansible.builtin.debug:
       msg: "{{ name | lower }}"  
+
+  - name: validating whether a valid ip or not
+    vars:
+      ip: 256.176.11.256
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utlis.ipaddr }}"
