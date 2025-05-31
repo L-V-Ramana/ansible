@@ -1,17 +1,32 @@
-- name: conditions
+# - name: conditions
+#   hosts: local
+#   become: yes
+#   conncetion: local 
+#   tasks:
+#   - name: installing nginx
+#     ansible.builtin.dnf:
+#       name: nginx
+#       state: present
+#     when: ansible_os_family == "RedHat"
+  
+#   - name: installing nginx in ubuntu
+#     ansible.builtin.apt:
+#       name: nginx 
+#       state: present
+#     when: ansible_os_family == "Debain"
+
+- name: playbook control using ansible facts
   hosts: local
   become: yes
-  conncetion: local 
   tasks:
-  - name: installing nginx
+  - name: install nginx if redhat
     ansible.builtin.dnf:
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
-  
-  - name: insatlling nginx in ubuntu
-    ansible.builtin.apt:
-      name: nginx 
-      state: present
-    when: ansible_os_family == "Debain"
 
+  - name: install nginx if debian
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    when: ansible_os_family == "Debian"
