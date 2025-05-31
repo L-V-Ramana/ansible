@@ -1,5 +1,6 @@
 - name: conditions
   hosts: local
+  become: yes
   conncetion: local 
   tasks:
   - name: installing nginx
@@ -13,3 +14,4 @@
     - name: nginx 
       state: present
     when: ansible_os_family == "Debain"
+
