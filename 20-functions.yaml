@@ -4,5 +4,5 @@
   tasks:
   - name: checking default
     ansible.builtin.debug:
-      msg: "{{ person }}"
+      msg: "{{ person | default('ramana') }}"
 
