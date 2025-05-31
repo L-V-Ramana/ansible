@@ -1,12 +1,27 @@
-- name: loops for installing
+# - name: loops for installing
+#   hosts: local
+#   connection: local
+#   become: yes
+#   tasks:
+#   - name: installing multiple services
+#     ansible.buitltin.package:
+#       name: "{{ item }}"
+#       state: present
+#     loop:
+#     - nginx
+#     - mysql
+#     - zip
+
+- name: install packages
   hosts: local
   connection: local
+  become: yes
   tasks:
-  - name: installing multiple services
-    ansible.buitltin.package:
+  - name: install packages
+    ansible.builtin.package:
       name: "{{ item }}"
-      state: present
+      state: installed
     loop:
-    - nginx
     - mysql
+    - nginx
     - zip
