@@ -2,10 +2,27 @@
   hosts: local
   connection: local
   tasks:
-  - name: redirecting
+  - name: example for command 
+  #in command we can just use the command we cant able to redirect as ls -ltr| /tmp/output.txt for that we hve to use shell
     ansible.builtin.command: "ls -ltr"
     register: output
   
   - name: printing output
     ansible.builtin.debug:
       msg: "{{ output }}" 
+
+  - name: shell command
+    hosts: local
+    connection: local 
+    tasks:
+    - name: shell 
+      ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
+      register: shell_output
+    
+    - name: printing shell output
+      hosts: local
+      connection: local
+      tasks:
+      - name: printing shell output
+        ansible.builtin.debug:
+         msg: "{{ shell_output }}"
