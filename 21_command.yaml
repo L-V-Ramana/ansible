@@ -11,18 +11,12 @@
     ansible.builtin.debug:
       msg: "{{ output }}" 
 
-  - name: shell command
-    hosts: local
-    connection: local 
-    tasks:
-    - name: shell 
-      ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
-      register: shell_output
+  
+  - name: shell 
+    ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
+    register: shell_output
     
-    - name: printing shell output
-      hosts: local
-      connection: local
-      tasks:
-      - name: printing shell output
-        ansible.builtin.debug:
-         msg: "{{ shell_output }}"
+ 
+  - name: printing shell output
+    ansible.builtin.debug:
+      msg: "{{ shell_output }}"
