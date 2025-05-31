@@ -1,6 +1,6 @@
 - name: shell vs command
   hosts: local
-  connections: local
+  connection: local
   tasks:
   - name: redirecting
     ansible.builtin.command: "ls -ltr"
