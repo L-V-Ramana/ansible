@@ -1,0 +1,7 @@
+- name: passing arguments from command 
+  hosts: local 
+  connection: local 
+  tasks:
+    - name: collecting arguments from arguments
+      catalogue.buitin.debug:
+       msg: "information recived from the arguments as {{ course }} and {{ batch }}"
