@@ -1,7 +1,7 @@
 - name: conditions
   hosts: local
   connection: local
-  vars_propt:
+  vars_prompt:
   - name: number
     prompt: "enter a number"
     private: true
@@ -10,3 +10,8 @@
       ansible.builtin.debug:
        msg: "{{number}}is less than 20 "
       when: number < 20
+    
+    - name: printing number greater than 20
+      ansible.builtin.debug:
+        msg: "{{ number }}"
+      when: number > 20
