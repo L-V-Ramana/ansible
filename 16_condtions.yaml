@@ -1,7 +1,7 @@
 - name: conditions
   hosts: local
   become: yes
-  conncetion: local 
+  connetion: local 
   tasks:
   - name: installing nginx
     ansible.builtin.dnf:
