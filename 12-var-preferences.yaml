@@ -1,35 +1,35 @@
-# - name: variable preferences
-#   hosts: local
-#   connection: local
-#   vars:
-#     greeting: "from vars"
-#   vars_files:
-#   - course.yaml
-#   vars_prompt:
-#   - name: greeting
-#     prompt: enter greeting
-#     private: true
-#   tasks:
-#   - name: checking varibales 
-#     vars:
-#       greeting: from task
-#   ansabile.builtin.debug:
-#     msg: "{{ greeting }}"
-
-- name: understand vars preference
+- name: variable preferences
   hosts: local
   connection: local
   vars:
-    GREETING: "Hello from PLAY"
+    greeting: "from vars"
   vars_files:
   - course.yaml
   vars_prompt:
-  - name: GREETING
-    prompt: Please enter the greeting
-    private: false
+  - name: greeting
+    prompt: enter greeting
+    private: true
   tasks:
-  - name: print the greeting
+  - name: checking varibales 
     vars:
-      GREETING: "Hello from TASK"
-    ansible.builtin.debug:
-      msg: "{{ GREETING }}"
+      greeting: from task
+    ansabile.builtin.debug:
+      msg: "{{ greeting }}"
+
+# - name: understand vars preference
+#   hosts: local
+#   connection: local
+#   vars:
+#     GREETING: "Hello from PLAY"
+#   vars_files:
+#   - course.yaml
+#   vars_prompt:
+#   - name: GREETING
+#     prompt: Please enter the greeting
+#     private: false
+#   tasks:
+#   - name: print the greeting
+#     vars:
+#       GREETING: "Hello from TASK"
+#     ansible.builtin.debug:
+#       msg: "{{ GREETING }}"
