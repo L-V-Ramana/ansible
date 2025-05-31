@@ -1,12 +1,19 @@
 - name: variables reading from files
   hosts: local
-  connection:
-  become: yes
   vars_files:
   - course.yaml
   tasks: 
     - name: printing vars from another files
       ansible.builtin.debug:
-        msg: "learning {{ couse }} from {{ trainer }} in {{ batch }}"
+        msg: "learning {{ course } from trainer {{ trainer }} in { {batch }}"
 
   
+# - name: variables from files
+#   hosts: local
+#   connection: local
+#   vars_files:
+#   - course.yaml
+#   tasks:
+#   - name: print course information
+#     ansible.builtin.debug:
+#       msg: "Hello I am learning {{ COURSE }}, Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}"
