@@ -1,0 +1,19 @@
+- name: variable preferences
+  hosts: local
+  connection: local
+  vars:
+    greetings: devops
+  vars_file:
+  - course.yaml
+  vars_prompt:
+  - name: greeting
+    prompt: enter greeting
+    private: true
+  tasks:
+  - name: checking varibales 
+  vars:
+    greeting: ansible
+  ansabile.builtin.debug:
+       msg: "{{ greeting }}"
+
+      

@@ -1,6 +1,7 @@
 course: devops with aws
 trainer: sivakumarreddy
 batch: 84s
+greeting: "greeting from file"
 
 # COURSE: DevSecOps with AWS
 # DURATION: 120HR
