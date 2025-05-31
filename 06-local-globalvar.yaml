@@ -1,6 +1,7 @@
 - name: local and global vars in ansible
   hosts: local
-  become: yes
+  # become: yes
+  connection: local
   vars:
     course: devops with Aws
     trainer: lella 
@@ -16,3 +17,22 @@
       ansible.builtin.debug:
         msg: "learning {{ course }} from {{ trainer }} in {{ batch }}"
 
+# - name: play level variables
+#   hosts: local
+#   connection: local
+#   vars:
+#     COURSE: DevOps with AWS
+#     DURATION: 10HR
+#     TRAINER: Sivakumar
+#   tasks:
+#   - name: print course information
+#     vars:
+#       COURSE: Ansible
+#     ansible.builtin.debug:
+#     #vars refernce should be surrounded by ""
+#       msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
+
+#   - name: print course information again
+#     ansible.builtin.debug:
+#     #vars refernce should be surrounded by ""
+#       msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
