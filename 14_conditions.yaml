@@ -4,14 +4,14 @@
   vars_prompt:
   - name: number
     prompt: enter a number
-    private: true
+    private: false
   # vars:
   #   number: 78
   tasks:
     - name: printing numbers
       ansible.builtin.debug:
        msg: "{{number}}is less than 20 "
-      when: number < 20
+      when: number <= 20
     
     - name: printing number greater than 20
       ansible.builtin.debug:
