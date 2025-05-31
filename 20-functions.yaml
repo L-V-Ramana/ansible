@@ -12,3 +12,18 @@
     ansible.builtin.debug:
       msg: "{{ names | split(',') }}"
 
+  - name: convert list to map
+    vars:
+      skills:
+        - { 'key': 'ramana', 'value': 'java' }
+        - { 'key': 'rakesh', 'value':'cpp'}
+    ansible.builtin.debug:
+      msg: "{{ skills | items2ditc }}"
+
+  - name: convert map to list 
+    vars:
+      name: ramana
+      skill: java
+      age: 24
+    ansabile.builtin.debug:
+      msg: "{{ skills | dict2items }}"
