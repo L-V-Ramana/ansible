@@ -32,7 +32,7 @@
     vars: 
       name: ramana
     ansible.builtin.debug:
-    msg: "{{ names | upper }}"
+      msg: "{{ names | upper }}"
 
   - name: lowercaser to upper
     vars: 
