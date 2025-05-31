@@ -1,0 +1,6 @@
+- name: host varibles not in local
+  hosts: frontend 
+  tasks:
+    -name: printg variables for frintend server from .ini file which are dedicated for front end
+    ansible.builtin.debug:
+      msg: "learning course from {{ trainer }} {{ cousrse }} in {{ batch }}" 
