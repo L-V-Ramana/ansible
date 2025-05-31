@@ -1,0 +1,7 @@
+- name: reading variables from inventory.ini
+  hosts: local
+  becomme: no
+  tasks:
+    - name: read variables from inventory
+      ansible.builtin.debug:
+        msg: "learning {{course}} from {{trainer}} from {{batch}}"
