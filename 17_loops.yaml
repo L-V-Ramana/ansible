@@ -4,14 +4,25 @@
   tasks:
   - name: printing items from loops
     ansable.builtin.debug:
-     msg: "skills are, {{ item }} "
+     msg: "skills are, {{ item }}"
     loop:
     - java
     - python
     - springboot
     - mysql
     - devops
-
+# - name: loops
+#   hosts: local
+#   connection: local
+#   tasks:
+#   - name: print names
+#     ansible.builtin.debug:
+#       msg: "Hello, {{ item }}" #item here is reserved keyword
+#     loop:
+#     - Suresh
+#     - Ramesh
+#     - Joseph
+#     - Raheem
 
 
     # ansible-playbook -i inventory.ini -e "ansible_user-ec2-user" -e "ansible_password-Devops321" 17_loops.yaml
