@@ -6,5 +6,5 @@
   tasks:
     - name: printing numbers
       ansible.builtin.debug:
-       msg: "nuber"
+       msg: "number"
       when: number < 20
