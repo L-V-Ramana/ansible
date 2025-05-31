@@ -1,0 +1,13 @@
+- name: loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: printing items from loops
+    ansable.builtin.debug:
+     msg: "skills are, {{ items }} "
+    loop:
+    - java
+    - python
+    - springboot
+    - mysql
+    - devops
