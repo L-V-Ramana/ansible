@@ -1,0 +1,11 @@
+- name: shell vs command
+  hosts: local
+  connections: local
+  tasks:
+  - name: redirecting
+    ansible.builtin.command: "ls -ltr"
+    register: output
+  
+  - name: printing output
+    ansible.builtin.debug:
+      msg: "{{ output }}" 
