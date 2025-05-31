@@ -27,3 +27,13 @@
       age: "24"
     ansible.builtin.debug:
       msg: "{{ skills | dict2items }}"
+    
+  - name: uppercase
+    ansible.builtin.debug:
+    msg: "{{ names | upper }}"
+
+  - name: lowercaser to upper
+    vars: 
+      name: RAMANA
+    ansible.builtin.debug:
+      msg: "{{ name | lower }}"  
