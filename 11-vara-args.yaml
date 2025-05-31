@@ -3,6 +3,6 @@
   connection: local 
   tasks:
   - name: collecting arguments from arguments
-    ansible.buitin.debug:
+    ansible.builtin.debug:
        msg: "information recived from the arguments as {{ course }} and {{ batch }}"
 
