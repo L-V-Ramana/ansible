@@ -10,9 +10,9 @@
       vars:
         course: ansible
       ansible.builtin.debug:
-        msg: "learning {{course}} from {{trainer}} in {{batch}}"
+        msg: "learning {{ course }} from {{ trainer }} in {{ batch }}"
   
     - name: printing couse info again
       ansible.builtin.debug:
-        msg: "learning {{course}} from {{trainer}} in {{batch}}"
+        msg: "learning {{ course }} from {{ trainer }} in {{ batch }}"
 
