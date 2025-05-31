@@ -20,13 +20,14 @@
     ansible.builtin.debug:
       msg: "{{ skills | items2dict }}"
 
-  # - name: convert map to list 
-  #   vars:
-  #     name: ramana
-  #     skill: java
-  #     age: "24"
-  #   ansible.builtin.debug:
-  #     msg: "{{ skills | dict2items }}"
+  - name: convert map to list 
+    vars:
+      skills:
+        name: ramana
+        skill: java
+        age: "24"
+    ansible.builtin.debug:
+      msg: "{{ skills | dict2items }}"
     
   - name: uppercase
     vars: 
