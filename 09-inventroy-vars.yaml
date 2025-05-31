@@ -1,6 +1,7 @@
 - name: reading variables from inventory.ini
   hosts: local
-  becomme: no
+  become: no
+  connection: local
   tasks:
     - name: read variables from inventory
       ansible.builtin.debug:
