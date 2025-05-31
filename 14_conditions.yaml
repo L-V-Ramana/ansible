@@ -15,5 +15,5 @@
     
     - name: printing number greater than 20
       ansible.builtin.debug:
-        msg: "{{ number }}"
+        msg: "{{ number }} is greater than 20"
       when: number > 20
