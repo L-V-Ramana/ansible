@@ -25,5 +25,5 @@
       name: ramana
       skill: java
       age: 24
-    ansabile.builtin.debug:
+    ansible.builtin.debug:
       msg: "{{ skills | dict2items }}"
