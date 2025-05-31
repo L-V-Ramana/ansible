@@ -5,7 +5,7 @@
   tasks: 
     - name: printing vars from another files
       ansible.builtin.debug:
-        msg: "learning {{ course } from trainer {{ trainer }} in { {batch }}"
+        msg: "learning {{ course }} from trainer {{ trainer }} in {{ batch }}"
 
   
 # - name: variables from files
