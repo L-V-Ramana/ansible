@@ -3,8 +3,10 @@
   connection:
   become: yes
   vars_files:
-    - course.yaml
+  - course.yaml
   tasks: 
     - name: printing vars from another files
       ansible.builtin.debug:
         msg: "learning {{ couse }} from {{ trainer }} in {{ batch }}"
+
+  
