@@ -1,13 +1,13 @@
-- name: expecting input from user by using promy
+- name: expecting input from user by using promt
   hosts: local
   connection: local
-  vars_promt:
+  vars_prompt:
     - name: username
-      promt: please enter your username
+      prompt: please enter your username
       private: false
 
-    - name: Password
-      promt: please enter your Password
+    - name: password
+      prompt: please enter your Password
       private: true
 
   tasks:
