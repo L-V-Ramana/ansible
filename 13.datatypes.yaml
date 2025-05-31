@@ -1,0 +1,19 @@
+- name: datatypes in ansible 
+  hosts: local 
+  connection: local 
+  vars:
+    name: ramana
+    age: 25
+    adult: true
+    skills:
+      - java
+      - sql
+      - springboot
+      - devops
+    experiance:
+      dheeyantra: 1yr
+      peopletech: "4months, 11months"
+  tasks: 
+    - name: printing all data types 
+      ansible.builtin.debug:
+        msg: ""
