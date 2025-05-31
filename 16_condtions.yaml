@@ -1,0 +1,15 @@
+- name: conditions
+  hosts: local
+  conncetion: local 
+  tasks:
+  - name: installing nginx
+    ansible.builtin.dnf:
+    - name: nginx
+      state: present
+    when: ansible_os_family == "RedHat"
+  
+  - name: insatlling nginx in ubuntu
+    ansible.builtin.apt:
+    - name: nginx 
+      state: present
+    when: ansible_os_family == "Debain"
