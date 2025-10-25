@@ -1,4 +1,4 @@
-- name: playlevel vars
+- name: playlevel_vars
   hosts: local
   connectio: local
   vars:
