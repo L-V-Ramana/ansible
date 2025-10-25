@@ -10,4 +10,4 @@
     vars:
       course: devops
     ansible.builtin.debug:
-      msg: "trainer: {{ trainer }}, course: {{ course }}, duration: {{ password }}"
+      msg: "trainer: {{ trainer }}, course: {{ course }}, "
