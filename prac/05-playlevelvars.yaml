@@ -2,9 +2,9 @@
   hosts: local
   connectio: local
   vars:
-      name: ramana
-      course: Devops
-      duration: 120hr
+    name: ramana
+    course: Devops
+    duration: 120hr
   tasks:
   - name: printing vaars
     ansible.builtin.debug:
