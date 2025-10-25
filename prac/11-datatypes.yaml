@@ -16,4 +16,4 @@
   tasks:
   - name: printing vars
     ansible.builtin.debug:
-      msg: "duration: {{ duration }}, name: {{ uname }}, is male?: {{ male }}, courses are:{{ courses }} from trainers: {{ trainers }}"
+      msg: "duration: {{ duration }}, name: {{ uname }}, is male?: {{ male }}, courses are:{{ course }} from trainers: {{ trainers }}"
