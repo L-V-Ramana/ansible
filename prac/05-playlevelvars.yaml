@@ -1,6 +1,6 @@
 - name: playlevel_vars
   hosts: local
-  connectio: local
+  connection: local
   vars:
     name: ramana
     course: Devops
