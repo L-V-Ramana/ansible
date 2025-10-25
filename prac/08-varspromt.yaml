@@ -4,7 +4,7 @@
   vars_promt:
     - name: trainer
       promt: "enter trainer"
-      private: no
+      private: false
   tasks:
   - name: vars promts
     vars:
