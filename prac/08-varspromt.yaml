@@ -3,7 +3,7 @@
   connection: local
   vars_promt:
     - name: trainer
-      promt: "enter trainer"
+      prompt: "enter trainer"
       private: false
   tasks:
   - name: vars promts
