@@ -9,3 +9,14 @@
     - name: printing course info
       ansible.builtin.debug:
         msg: "i am learning: {{course}} by {{  trainer}} in {{batch}}"
+
+
+- name: 2nd play
+  hosts: local
+  vars:
+    course: frontend
+  tasks:
+    vars:
+      trainer: sivakumar
+    ansible.builtin.debug:
+     msg: "printing{{course}} and{{trainer}}"

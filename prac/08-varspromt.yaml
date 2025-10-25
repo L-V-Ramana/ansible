@@ -1,0 +1,13 @@
+- name: vars promt
+  hosts: local
+  connection: local
+  vars_promt:
+    - name: trainer
+      promt: "enter trainer"
+      private: no
+  tasks:
+  - name: vars promts
+    vars:
+      course: devops
+    ansible.builtin.debug:
+      msg: "trainer: {{ trainer }}, course: {{ course }}, duration: {{ password }}"

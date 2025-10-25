@@ -1,0 +1,18 @@
+- name: variables from inventory 
+  hosts: local
+  connection: local
+  # vars:
+  #   course: devops
+  #   trainer: ramana
+  # vars_file:
+  # - course.yaml
+  # vars_promt:
+  # - name: course
+  #   promt: "enter your name"
+  #   private: yes
+  tasks:
+  - name: printing vars
+    # vars:
+      # course: amsible
+    ansible.builtin.debug:
+      msg: "duration: {{ duration }}, course: {{ course }} trainer: {{ trainer }}"

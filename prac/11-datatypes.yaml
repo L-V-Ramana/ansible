@@ -1,0 +1,19 @@
+- name: ansible datatypes
+  hosts: local
+  connection: local
+  vars:
+    duration: 100
+    name: "ramana"
+    male: true
+    course:
+    - java
+    - springboot
+    - shell
+    - ansible
+    trainers:
+      java: "sommana, rohit"
+      devops: "sivakumar"
+    tasks:
+    - name: printing vars
+      ansible.builtin.debug:
+       msg: "duration: {{ duration }}, name: {{ name }}, is male?: {{ male }}, courses are:{{ courses }} from trainers: {{ trainers }}"

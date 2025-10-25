@@ -7,3 +7,4 @@
        msg: "hello world from ansible"
 
 
+# ansible-playbook -i inventory.ini -e "ansible_user-ec2-user" -e "ansible_password-Devops321" 17_loops.yaml
