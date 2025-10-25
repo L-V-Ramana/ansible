@@ -13,7 +13,7 @@
     trainers:
       java: "sommana, rohit"
       devops: "sivakumar"
-    tasks:
-    - name: printing vars
-      ansible.builtin.debug:
-       msg: "duration: {{ duration }}, name: {{ uname }}, is male?: {{ male }}, courses are:{{ courses }} from trainers: {{ trainers }}"
+  tasks:
+  - name: printing vars
+    ansible.builtin.debug:
+      msg: "duration: {{ duration }}, name: {{ uname }}, is male?: {{ male }}, courses are:{{ courses }} from trainers: {{ trainers }}"
