@@ -8,5 +8,4 @@
       state: present
     loop:
     - nginx
-    - shell
-    - mongodb
+    - zip
