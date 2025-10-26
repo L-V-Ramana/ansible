@@ -2,7 +2,6 @@
   hosts: frontend
   tasks:
   - name: printing default name
-    vars:
     ansible.builtin.debug:
       msg: "{{persons}}|default('ravi')"
   
