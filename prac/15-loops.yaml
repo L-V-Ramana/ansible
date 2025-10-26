@@ -1,0 +1,11 @@
+- name: loops in ansible
+  hosts: frontend
+  tasks:
+  - name: looping 
+    ansible.builtin.debug:
+      msg: "items: {{ item }}"
+    loop:
+    - "sai"
+    - "ramana"
+    - "siva"
+    - "evado"

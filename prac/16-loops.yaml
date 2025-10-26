@@ -1,0 +1,11 @@
+- name: loops on installitions
+  hosts: frontend
+  tasks:
+  - name: installitions
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - nginx
+    - shell
+    - mongodb

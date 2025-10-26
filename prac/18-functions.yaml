@@ -1,0 +1,42 @@
+- name: functions in ansible
+  hosts: frontend
+  tasks:
+  - name: printing default name
+    vars:
+    ansible.builtin.debug:
+      msg: "{{persons}}|default('ravi')"
+  
+  - name: printing names from string to list
+    vars:
+      persons: "ramana,ravi,krishna"
+    ansible.builtin.debug:
+      msg: "{{ persons| split(',') }}"
+  
+  - name: list to dict
+    vars:
+      course:
+      - "{key: 'name', value: 'ramana'}"
+      - "{key: 'name', value: 'ravi'}"
+      - "{key: 'name', value: 'krishna'}"
+    ansible.builtin.debug:
+      msg: "{{course|itemtodict}}"
+
+  - name: dict to list
+    vars:
+      courses:
+        ramana: 'java,python,shell' 
+        sai: 'shell,ansible'
+    ansible.builtin.debug:
+      msg: "courses:{{ courses|dicttoitem }}"
+  
+  - name: upper
+    vars:
+      person: "RAMANA"
+    ansible.builtin.debug:
+      msg: "{{ person| upper }}"
+
+  - name: lower
+    vars:
+      person: "ramana"
+    ansible.builtin.debug:
+      msg: "{{ person|lower }}"
