@@ -14,9 +14,9 @@
   - name: list to dict
     vars:
       course:
-      - "{key: 'name', value: 'ramana'}"
-      - "{key: 'name', value: 'ravi'}"
-      - "{key: 'name', value: 'krishna'}"
+      - {key: 'name', value: 'ramana'}
+      - {key: 'name', value: 'ravi'}
+      - {key: 'name', value: 'krishna'}
     ansible.builtin.debug:
       msg: "{{course|itemtodict}}"
 
