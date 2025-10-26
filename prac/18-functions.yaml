@@ -18,7 +18,7 @@
       - {key: 'name', value: 'ravi'}
       - {key: 'name', value: 'krishna'}
     ansible.builtin.debug:
-      msg: "{{course|itemtodict}}"
+      msg: "{{course | item2dict }}"
 
   - name: dict to list
     vars:
@@ -26,7 +26,7 @@
         ramana: 'java,python,shell' 
         sai: 'shell,ansible'
     ansible.builtin.debug:
-      msg: "courses:{{ courses|dicttoitem }}"
+      msg: "courses:{{ courses|dict2item }}"
   
   - name: upper
     vars:
