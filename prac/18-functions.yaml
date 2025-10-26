@@ -3,7 +3,7 @@
   tasks:
   - name: printing default name
     ansible.builtin.debug:
-      msg: "{{persons}}|default('ravi')"
+      msg: " {{persons}} | default('ravi') "
   
   - name: printing names from string to list
     vars:
