@@ -1,5 +1,6 @@
 - name: conditions on facts
   hosts: frontend
+  become: yes
   tasks: 
   - name: install nginx in ubuntu
     ansibel.builtin.apt:
