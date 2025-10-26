@@ -10,7 +10,7 @@
       msg: "{{ command_result }}"
   
   - name: excuing linux command using command
-    ansible.buitin.command: "ls -lt"
+    ansible.builtin.command: "ls -lt"
     register: command_output
 
   - name: printing output
